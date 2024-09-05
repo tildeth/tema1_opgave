@@ -3,6 +3,10 @@
 @import url("./reset.css") layer(reset);
 @import url("./overrides.css") layer(overrides);
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 @layer global {
     html {
         --primary01: #ffcc4a;
@@ -13,11 +17,15 @@
 
         --text-color: #595566;
 
+        --square-pattern: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red"><path d="M7.47662 4.02206C6.50635 3.05178 5.53232 2.07774 4.56205 1.10745C4.28482 0.83023 3.80905 0.83023 3.53183 1.10745C2.56155 2.07774 1.59128 3.04803 0.621002 4.02206C0.343781 4.29929 0.343781 4.77506 0.621002 5.05229C1.59128 6.02258 2.5653 6.99661 3.53558 7.9669C3.8128 8.24412 4.28857 8.24412 4.56579 7.9669C5.53607 6.99661 6.51009 6.02258 7.48037 5.05229C7.63022 4.90244 7.69016 4.73011 7.69016 4.56527C7.69016 4.55403 7.69016 4.54654 7.69016 4.5353C7.69016 4.52781 7.69016 4.51657 7.69016 4.50908C7.69016 4.34424 7.63022 4.17191 7.47662 4.02206ZM4.04881 6.41968C3.41944 5.79031 2.79382 5.16468 2.16445 4.5353C2.79382 3.90593 3.41944 3.2803 4.04881 2.65092C4.67818 3.2803 5.3038 3.90593 5.93317 4.5353C5.3038 5.16468 4.67818 5.79031 4.04881 6.41968Z"/></svg>');
+
     
 
         font-family: 'Lato', sans-serif;
         line-height: 1.5;
         color: var(--text-color);
+
+
     }
 
     /*Overskifter*/
@@ -92,4 +100,72 @@
     font-weight: 400;
     line-height: 2.14;
     }
+
+    /*Knapper og "tekst" felt*/
+    button.black {
+        background-color: var(--primary03);
+        color: var(--secondary02);
+        border-radius: 42px;
+        padding: 16px 37px;
+      }
+      button.black:hover {
+        background-color: var(--secondary02);
+        border: 2px var(--primary03);
+        color: var(--primary03);
+      }
+      button.yellow {
+        background-color: var(--primary01);
+        color: var(--primary03);
+        border-radius: 42px;
+        padding: 16px 37px;
+      }
+      button.yellow:hover {
+        background-color: var(--primary03);
+        color: var(--secondary02);
+      }
+      div.whitebox {
+        background-color: var(--secondary02);
+        color: var(--primary03);
+        border-radius: 42px;
+        align-self: center;
+        padding: 16px 37px;
+    
+      }
+
+      div.yellow_tag{
+        display: flex;
+        padding: 0px 17px;
+        gap: 10px;
+        border-radius: 20px;
+        background-color: var(--primary01);
+        color: var(--primary03);
+        font-family: "Lato";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.47;
+        letter-spacing: 2.32px;
+        text-transform: uppercase;
+        width: fit-content;
+
+      }
+
+      div.green_tag{
+        display: flex;
+        padding: 0px 17px;
+        gap: 10px;
+        border-radius: 20px;
+        background-color: var(--primary02);
+        color: var(--secondary02);
+        font-family: "Lato";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.47;
+        letter-spacing: 2.32px;
+        text-transform: uppercase;
+        width: fit-content;
+
+      }
+      
 }

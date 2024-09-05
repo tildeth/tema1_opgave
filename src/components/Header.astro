@@ -1,0 +1,89 @@
+--- 
+
+---
+
+<header>
+    <div class="wrapper_header">
+    <h5><a class="logo_header" href="index.astro"> AskExperts</a></h5>
+    <nav>
+        <a href="../src/pages/index.astro">Home</a>
+        <a href="../src/pages/casestudy.astro">Case Study</a>
+        <a href="../src/pages/team.astro">Team</a>
+        <a href="../src/pages/about.astro">About</a>
+    </nav>
+    <button id="header_button" class="yellow" popovertarget="popup">Login</button>
+
+    <div popover id="popup">
+        <article class="popup_content">
+        <h3>Dashboard Login</h3>
+        <div class="whitebox"> Enter Email</div>
+        <div class="whitebox"> Enter Password</div>
+        <button class="yellow">Go to dashboard</button>
+        </article>
+    </div>
+    </div>  
+
+    
+
+</header>
+
+<style>
+@layer components{
+    header{
+        background-color: rgba(27, 27, 27, 0.91);
+        
+
+    }
+    .wrapper_header{
+        display: flex;
+        padding:38px;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    a:visited{
+        color:var(--secondary02);
+    }
+    a{
+        text-decoration:none;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;      
+    }
+
+    #header_button{
+        padding: 4px 16px;
+    }
+
+    h3{
+        color: var(--secondary02);
+        margin-bottom: 5%;
+    }
+
+    .popup_content{
+        background-color: var(--primary03);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 45px;
+        border-radius: 23px;
+        width: 500px; 
+        align-items: center;
+
+    }
+
+
+   
+
+    .whitebox{
+        align-self: stretch;
+    }
+
+ 
+}
+</style>

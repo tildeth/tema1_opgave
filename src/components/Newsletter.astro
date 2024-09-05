@@ -1,0 +1,111 @@
+---
+
+---
+
+<div id="news_container">
+    <div class="news_content">
+        <div class="news_text">
+            <h6>Subscribe Our Newsletter</h6>
+            <p>Build stronger Customer Relationships with Consultalk</p>
+        </div>
+        <div class="news_buttons">
+            <div class="whitebox"> your mail adress</div>
+            <button class="yellow">Subscribe</button>
+        </div>
+        </div>
+</div>
+
+<style>
+#news_container{
+    inline-size: min(800px, 100% - 1rem);
+    block-size: 175px;
+    border-radius: 10px;
+    background: #181818;
+    overflow: clip;
+    position: relative;
+    isolation: isolate;
+    
+    
+    &::before {
+    --square-count: 12;
+    --square-size: 1rem;
+    
+    --_square-size: var(--square-size, 1rem);
+    --_square-half: calc(var(--square-size) / 2);
+    --_square-sum: calc(var(--square-count) * var(--square-size));
+    z-index: -1;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: 0 0;
+    inline-size: calc( round( var(--_square-sum), var(--_square-size) ) - var(--_square-half) );
+    aspect-ratio: .7;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size),
+      var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+    /*clip-path: polygon(-3% 0%, 100% 0%, 100% 103%);*/
+    rotate: -45deg;
+  }
+    &::after {
+      content: '';
+      height: inherit;
+      aspect-ratio: 1;
+      border-radius: inherit;
+      background: #4EAF4E;
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      rotate: -45deg;
+      transform-origin: right top;
+    }
+}
+
+.news_content{
+display: flex;
+align-self: center;
+gap: 5%;
+justify-content: center;
+}
+.news_text{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: center;
+margin-top: 7%;
+}
+
+.news_buttons{
+display: flex;
+flex-direction: row;
+margin: 1%;
+font-size: 12px;
+gap: 5px;
+margin-top: 7%;
+
+}
+
+button.white{
+color: grey;
+}
+
+h6{
+color: var(--secondary02);
+}
+p{
+color: var(--secondary01);
+font-size: 12px;
+}
+  </style>
+
+
+
+
+
+
+
+
+
+ 
+
