@@ -1,0 +1,96 @@
+---
+
+---
+<section class="grid_hp1">
+    <figure>
+        <img src='src/assets/images/home2.png' alt=''>
+      </figure>
+      <div class="text_hp1">
+        <div class="yellow_tag">we'll work with you</div>
+        <h1>What to expect</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <ul>
+            <li>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day.</li>
+            <li>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital.</li>
+          </ul>
+      </div>
+
+</section>
+
+<style>
+    .grid_hp1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:5%;
+        margin: 7%;
+    
+}
+
+ul {
+  display: grid;
+  gap: 1rem;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #595566;
+}
+
+li:before {
+  content: '';
+  width: 1.6rem;
+  aspect-ratio: 1;
+  background: var(--checkmark-icon) 50% 50% / contain no-repeat;
+}
+figure {
+img{
+    border-radius: 20px;
+}
+
+  position: relative;
+
+  
+  &::before {
+    --square-count: 10;
+    --square-size: 1.34rem;
+    
+    --_square-size: var(--square-size, 1rem);
+    --_square-half: calc(var(--square-size) / 2);
+    --_square-sum: calc(var(--square-count) * var(--square-size));
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: -40px 360px auto auto;
+    /*inline-size: calc(var(--square-count) * 1.34rem - .67rem);*/
+    inline-size: calc( round( var(--_square-sum), var(--_square-size) ) - var(--_square-half) );
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size),
+      var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+    /*clip-path: polygon(-3% 0%, 100% 0%, 100% 103%);*/
+    
+  }
+ 
+  &::after {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: -1rem;
+    background: var(--primary02);
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  
+
+    }
+</style>
