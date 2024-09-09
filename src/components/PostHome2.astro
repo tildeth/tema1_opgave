@@ -1,0 +1,149 @@
+---
+
+---
+<section class="grid_hp2">
+
+    <div>
+        <div class="yellow_tag">Process</div>
+        <h1>Contact Us. It's Easy.</h1>
+        <p>
+            Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.
+        </p>
+        <div class="contact_details">
+            <img src="/src/icons/yel_phone.svg" alt="Yellow phone">
+            <div>
+            <p>Call Today</p>
+            <h6>+1 800 100 900</h6>
+        </div>
+        </div>
+        <div class="contact_details">
+            <img src="/src/icons/green_watch.svg" alt="Green watch">
+            <div>
+            <p>Monday To Friday</p>
+            <h6>9AM - 5PM</h6>
+            </div>
+        </div>
+        <div class="contact_details">
+            <img src="/src/icons/grey_location.svg" alt="Gre location pin">
+            <div>
+            <p>USA Office</p>
+            <h6>195 Devonshire St Boston, MA 02110
+            </h6>
+            </div>
+        </div>
+        
+      </div>
+    <figure>
+        <div class="hp2_galleri">
+        <img class="hp2_pic"src='src/assets/images/home3.png' alt=''>
+        <img src='src/assets/images/home4.png' alt=''>
+        <img src='src/assets/images/home5.png' alt=''>
+        </div>
+      </figure>
+    
+
+</section>
+
+<style>
+    .grid_hp2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:5%;
+        margin: 7%;
+    
+}
+.contact_details{
+    img{
+width: 45px;
+height: 45px;
+    }
+    display: flex;
+    gap: 3%;
+    padding: 2%;
+
+    h6{
+        font-size: 18px;
+    }
+
+}
+
+ul {
+  display: grid;
+  gap: 1rem;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #595566;
+}
+
+li:before {
+  content: '';
+  width: 1.6rem;
+  aspect-ratio: 1;
+  background: var(--checkmark-icon) 50% 50% / contain no-repeat;
+}
+
+.hp2_galleri{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+gap: 3%;
+
+
+.hp2_pic{
+    grid-row: 1/-1;
+}
+}
+
+figure {
+img{
+    border-radius: 20px;
+    width: 100%;
+}
+
+  position: relative;
+
+  
+  &::before {
+    --square-count: 10;
+    --square-size: 1.34rem;
+    
+    --_square-size: var(--square-size, 1rem);
+    --_square-half: calc(var(--square-size) / 2);
+    --_square-sum: calc(var(--square-count) * var(--square-size));
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: -40px -50px auto auto;
+    /*inline-size: calc(var(--square-count) * 1.34rem - .67rem);*/
+    inline-size: calc( round( var(--_square-sum), var(--_square-size) ) - var(--_square-half) );
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size),
+      var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+    /*clip-path: polygon(-3% 0%, 100% 0%, 100% 103%);*/
+    
+  }
+ 
+  &::after {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    bottom: -1rem;
+    background: var(--primary02);
+    width: 180px;
+    height: 100px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  
+
+    }
+</style>
