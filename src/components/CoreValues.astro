@@ -1,0 +1,85 @@
+---
+
+---
+
+<section data-surface="dark">
+
+    <div class="grid">
+      <div class="card">
+        <img src="/src/icons/core1.svg" alt="Icon">
+        <h3>Creative Ideas</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.</p>
+        <div class="text_core">
+            <h4>Read More</h4>
+            <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/src/icons/core2.svg" alt="Icon">
+        <h3>Best Features</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="card">
+        <img src="/src/icons/core3.svg" alt="Icon">
+        <h3>Experience</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam..</p>
+      </div>
+      <div class="card">
+        <img src="/src/icons/core4.svg" alt="Icon">
+        <h3>Easy Solutions</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+@layer components {
+    [data-surface="light"] {
+  --bg-section: var(--secondary02);
+  --bg-card: var(--secondary01);
+}
+
+[data-surface="dark"] {
+  --bg-section: var(--primary03);
+  --text-section: var(--primary03) ;
+  --bg-card: var(--secondary01);
+}
+
+}
+
+section {
+  background: var(--bg-section);
+  color: var(--text-section);
+}
+
+.card {
+  background: var(--bg-card);
+  color: var(--text-card);
+}
+
+h1,
+  h2,
+  h3,
+  h4 {
+    font: revert;
+    margin-block: 0 .35em;
+  }
+
+  section {
+    padding: 3rem max(2rem, 50% - 800px / 2);
+  }
+  
+  .grid {
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    border-radius: 8px;
+    padding: 1.5rem;
+    height: fit-content;
+  }
+
+
+  </style>
