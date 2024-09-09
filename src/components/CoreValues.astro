@@ -2,32 +2,53 @@
 
 ---
 
-<section data-surface="dark">
+<section data-surface="light">
+   
+    <div class="yellow_tag">growing with our clients</div>
+    <h2>Our core values & principles</h2>
+    <div class="core_top_text">
+        <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+        <button class="black">Get in touch</button>
+    </div>
+    <div>
 
-    <div class="grid">
+    </div>
+    <div class="grid_core">
       <div class="card">
         <img src="/src/icons/core1.svg" alt="Icon">
         <h3>Creative Ideas</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.</p>
         <div class="text_core">
             <h4>Read More</h4>
-            <i class="fas fa-arrow-right"></i>
+            <img src="/src/icons/b_arrow.svg" alt="pil">
         </div>
       </div>
       <div class="card">
         <img src="/src/icons/core2.svg" alt="Icon">
         <h3>Best Features</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="text_core">
+            <h4>Read More</h4>
+            <img src="/src/icons/b_arrow.svg" alt="pil">
+        </div>
       </div>
       <div class="card">
         <img src="/src/icons/core3.svg" alt="Icon">
         <h3>Experience</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam..</p>
+        <div class="text_core">
+            <h4>Read More</h4>
+            <img src="/src/icons/b_arrow.svg" alt="pil">
+        </div>
       </div>
       <div class="card">
         <img src="/src/icons/core4.svg" alt="Icon">
         <h3>Easy Solutions</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="text_core">
+            <h4>Read More</h4>
+            <img src="/src/icons/b_arrow.svg" alt="pil">
+        </div>
       </div>
     </div>
   </section>
@@ -35,8 +56,8 @@
   <style>
 @layer components {
     [data-surface="light"] {
-  --bg-section: var(--secondary02);
-  --bg-card: var(--secondary01);
+  --bg-section: var(--secondary01);
+  --bg-card: var(--secondary02);
 }
 
 [data-surface="dark"] {
@@ -46,6 +67,19 @@
 }
 
 }
+
+    .core_top_text{
+        display: flex;
+      justify-content: space-between;
+      gap: 10%;
+      align-items: center;
+      margin-bottom: 4%;
+      
+
+      button{
+        font-size: 14px;
+      }
+    }
 
 section {
   background: var(--bg-section);
@@ -57,8 +91,7 @@ section {
   color: var(--text-card);
 }
 
-h1,
-  h2,
+
   h3,
   h4 {
     font: revert;
@@ -69,7 +102,7 @@ h1,
     padding: 3rem max(2rem, 50% - 800px / 2);
   }
   
-  .grid {
+  .grid_core {
     display: grid;
     grid: auto / repeat(4, 1fr);
     gap: 1rem;
@@ -79,6 +112,22 @@ h1,
     border-radius: 8px;
     padding: 1.5rem;
     height: fit-content;
+    img{
+        width: 40px;
+        height: 40px;
+        margin: 2%;
+    }
+    .text_core{
+        display: flex;
+        align-items: center;
+        margin-top: 8%;
+        img{
+        width: 15px;
+        height: 15px;
+        margin-left: 5%;
+        }
+    }
+ 
   }
 
 
