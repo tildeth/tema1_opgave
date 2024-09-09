@@ -1,0 +1,136 @@
+---
+
+---
+<section class="grid_ap1">
+    
+      <div class="text_ap1">
+        <div class="green_tag">Our vision</div>
+        <h1>Turn your ideas into reality.</h1>
+        <p>
+            Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.
+        </p>
+        <ul>
+            <li>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day.</li>
+            <li>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital.</li>
+          </ul>
+      </div>
+      <figure>
+        <img src='src/assets/images/about1.jpg' alt=''>
+      </figure>
+</section>
+<dl>
+    <div>
+      <dt>Succesful Work</dt>
+      <dd>1128+</dd>
+    </div>
+    <div>
+      <dt>Team Member</dt>
+      <dd>908+</dd>
+    </div>
+    <div>
+        <dt>Happy customers</dt>
+        <dd>258+</dd>
+      </div>
+      <div>
+        <dt>Creative Idea</dt>
+        <dd>564+</dd>
+      </div>
+  </dl>
+
+<style>
+    .grid_ap1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:5%;
+        margin: 5%;
+        margin-bottom: 5%;
+    
+}
+
+ul {
+  display: grid;
+  gap: 1rem;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #595566;
+}
+
+li:before {
+  content: '';
+  width: 1.6rem;
+  aspect-ratio: 1;
+  background: var(--checkmark-icon) 50% 50% / contain no-repeat;
+}
+figure {
+img{
+    border-radius: 20px;
+    width: 100%;
+}
+
+  position: relative;
+
+  
+  &::before {
+    --square-count: 10;
+    --square-size: 1.34rem;
+    
+    --_square-size: var(--square-size, 1rem);
+    --_square-half: calc(var(--square-size) / 2);
+    --_square-sum: calc(var(--square-count) * var(--square-size));
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: -40px -40px auto auto;
+    /*inline-size: calc(var(--square-count) * 1.34rem - .67rem);*/
+    inline-size: calc( round( var(--_square-sum), var(--_square-size) ) - var(--_square-half) );
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size),
+      var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+    /*clip-path: polygon(-3% 0%, 100% 0%, 100% 103%);*/
+    
+  }
+ 
+  &::after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    background: var(--primary02);
+    width: 120px;
+    height: 100px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+    }
+    dl {
+  margin: 3rem;
+  text-align: center;
+  
+  
+  display: flex;
+  gap: 3rem;
+justify-content: center;
+  
+  > * {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1.125rem;
+    color: #181818;
+    
+    :last-child {
+      font-size: 3.125rem;
+      font-weight: 500;
+    }
+}
+}
+  
+</style>
