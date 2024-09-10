@@ -1,0 +1,43 @@
+---
+const {img, tag, description} = Astro.props;
+---
+
+<section class="image-container">
+    <img src={img} alt="office people">
+    <div class="text_container_header">
+    <div class="yellow_tag">{tag}</div>
+    <h2>{description}</h2>
+    </div>
+</section>
+
+
+<style>
+    @layer components {
+        .image-container {
+    position: relative;
+    display: inline-block; /* Dette holder sektionen kun så stor som billedet */
+}
+
+.image-container img {
+    display: block;
+    width: 100%; /* Sørger for, at billedet er responsivt */
+    height: auto;
+}
+
+.text_container_header{
+    position: absolute;
+    z-index: 10; 
+    top: 20%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: fit-content;
+    max-width: 60%;
+    padding: 2%;
+    border-radius: 20px;
+    display: grid;
+    place-content: center;
+
+}
+
+}
+</style>
