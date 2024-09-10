@@ -1,0 +1,101 @@
+---
+
+---
+
+<section class="faq">
+    <div class="green_tag">faq</div>
+    <h1>Customer Questions</h1>
+    <details name="a">
+        <summary>What will happen when I’ve sent my application?</summary>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</div>
+      </details>
+      <div class="line_faq"></div>
+      
+      <details name="b">
+        <summary>Can I get a free trial before I purchase?</summary>
+        <div>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</div>
+      </details>
+      <div class="line_faq"></div>
+      
+      <details name="c">
+        <summary>What should I include in my personal statement?</summary>
+        <div>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</div>
+      </details>
+      <div class="line_faq"></div>
+      <details name="d">
+        <summary>Will membership plans be charged automatically?</summary>
+        <div>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</div>
+      </details>
+      <div class="line_faq"></div>
+      
+      <details name="e">
+        <summary>What will happen when I’ve sent my application?</summary>
+        <div>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</div>
+      </details>
+      <div class="line_faq"></div>
+      
+      <details name="f">
+        <summary>Can I get a free trial before I purchase?</summary>
+        <div>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</div>
+      </details>
+      <div class="line_faq"></div>
+
+</section>
+
+<style>
+ .faq {
+      background-color: var(--secondary01);
+      margin: 7%;
+      padding: 8%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-radius: 27px;
+  }
+  div.green_tag{
+    align-self: center;
+  }
+
+  .line_faq{
+    background-color: #dadada;
+    height: 1px;
+    width: 100%;
+    align-self: center;
+  }
+
+  summary {
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 600;
+      list-style: none;
+      position: relative;
+      padding-right: 2rem;
+  }
+
+  summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: bold;
+      position: absolute;
+      right: 0; /* Align to the right */
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  details[open] summary::after {
+      content: '-';
+  }
+
+  details > div {
+      padding-top: 1rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: left;
+  }
+
+  h1 {
+      text-align: center;
+      font-size: 2rem;
+  }
+
+</style>
