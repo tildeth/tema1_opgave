@@ -1,0 +1,149 @@
+---
+
+---
+
+<div class="top">
+  <div class="text1">
+    <h1>Adam Buschemia Business Consultant</h1>
+    <p>
+      Get help from Alex Moore, a professional business coach with advanced
+      experience on growth and business scaling.
+    </p>
+    <button class="black">Book a Meeting</button>
+  </div>
+
+  <img src="/src/assets/images/sarah.jpg" alt="sarah">
+</div>
+<article class="box_container">
+  <div class="box1">
+    <h2>Finance & Restructuring</h2>
+    <p class="p">
+      Get help from Alex Moore, a professional business coach with advanced
+      experience on growth and business scaling.
+    </p>
+    <button class="black">Our Services</button>
+  </div>
+
+  <div class="box2">
+    <h2>Our Approach</h2>
+    <p class="p">
+      Get help from Alex Moore, a professional business coach with advanced
+      experience on growth and business scaling.
+    </p>
+    <button class="black">More About</button>
+  </div>
+
+  <div class="box3">
+    <h2>Consultalk Result</h2>
+    <p class="p">
+      Get help from Alex Moore, a professional business coach with advanced
+      experience on growth and business scaling.
+    </p>
+    <button class="black">Explore our Solutions</button>
+  </div>
+</article>
+
+<style>
+  article.box_container {
+    display: flex;
+    flex-direction: row;
+    top: 70%;
+    left: 6%;
+    gap: 2%;
+    justify-content: center;
+    position: absolute;
+    
+  }
+
+  .top {
+    background-color: var(--primary03);
+    display: flex;
+    width: 100%;
+    height: 600px;
+    flex-shrink: 0;
+    position: relative;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden;
+    margin-bottom: 15%;
+
+    button{
+        background-color: var(--secondary02);
+        color: var(--primary03);
+    }
+
+    button:hover{
+        background-color: var(--primary01);
+    }
+  }
+
+  .box1 {
+    background-color: rgba(38, 38, 38, 0.90);
+    z-index: 1;
+    max-width: 350px;
+    padding: 46px;
+    border-radius: 20px;
+
+    /*   flex: 1 0 0; */
+  }
+
+  .box2 {
+    background-color: rgba(38, 38, 38, 0.90);
+    z-index: 1;
+    max-width: 350px;
+    padding: 46px;
+    border-radius: 20px;
+
+    /*   flex: 1 0 0; */
+  }
+
+  .box3 {
+    background-color: rgba(38, 38, 38, 0.90);
+    z-index: 1;
+    max-width: 350px;
+    padding: 46px;
+    border-radius: 20px;
+
+    /*   flex: 1 0 0; */
+  }
+
+  h2 {
+    font-size: 20px;
+    color: var(--secondary02);
+    padding-bottom: 10px;
+  }
+
+  .p {
+    max-width: 300px;
+  }
+
+  .text1 {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline; 
+    margin-left: 5%;
+  
+  }
+
+  h1 {
+    color: var(--secondary02);
+    max-width: 20ch;
+  }
+
+  p {
+    color: var(--secondary02);
+    max-width: 50ch;
+  }
+
+  img {
+    flex-basis: 50%;center;
+    background-size: cover; 
+  }
+
+  button {
+    margin-top: 20px;
+  
+  }
+</style>
