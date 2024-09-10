@@ -1,9 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Header_pic from "../components/Header_pic.astro"
 
 ---
-<BaseLayout title="Case Study" >
+<BaseLayout title="Home" >
 	
-</BaseLayout>
+	<Header />
+	<Header_pic img="src/assets/images/header3.png" tag="case studies single" description="Taxes & Efficiency"/>
+	<Footer />
+	
+	
+</BaseLayout> 

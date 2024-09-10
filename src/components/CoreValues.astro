@@ -1,8 +1,8 @@
 ---
-
+const {theme} = Astro.props;
 ---
 
-<section data-surface="light">
+<section data-surface={theme} >
    
     <div class="yellow_tag">growing with our clients</div>
     <h2>Our core values & principles</h2>
@@ -62,8 +62,20 @@
 
 [data-surface="dark"] {
   --bg-section: var(--primary03);
-  --text-section: var(--primary03) ;
+  --text-card: var(--primary03) ;
   --bg-card: var(--secondary01);
+  --text-section: var(--secondary02);
+  h2{
+    color: var(--secondary02);
+  }
+  button{
+        background-color: var(--secondary02);
+        color: var(--primary03);
+    }
+
+    button:hover{
+        background-color: var(--primary01);
+    }
 }
 
 }
