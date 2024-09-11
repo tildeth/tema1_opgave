@@ -5,7 +5,7 @@ import EmployeeCard from "./EmployeeCard.astro";
 ---
 
 <section class="content">
-  <a href="/profile"><EmployeeCard img="src/assets/images/sarah.jpg" name="Sarah Jasmine" title="CEO at Company" description="Leverage agile frameworks to provide a robust synopsis for high level overviews." /></a>
+  <EmployeeCard img="src/assets/images/sarah.jpg" name="Sarah Jasmine" title="CEO at Company" description="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
 	<EmployeeCard img="src/assets/images/john.jpg" name="John Carter" title="Manager" description="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
 	<EmployeeCard img="src/assets/images/daisy.jpg" name="Daisy Stella" title="CEO at Company" description="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
 	<EmployeeCard img="src/assets/images/maya.jpg" name="Maya Elizabeth" title="CEO at Company" description="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
@@ -15,23 +15,18 @@ import EmployeeCard from "./EmployeeCard.astro";
 
 <style>
   @layer components {
-    [data-theme="dark"] {
-      --bg-section: red;
-      --text-section: #fff;
-      --bg-card: blue;
-      --text-card: #fff;
-    }
 
     section {
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
 
-      a{
-        text-decoration: none;
-        color: var(--text-color);
-      }
     }
+
+
     
   }
 </style>

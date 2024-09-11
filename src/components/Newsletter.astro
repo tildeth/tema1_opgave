@@ -100,6 +100,31 @@ p{
 color: var(--secondary01);
 font-size: 12px;
 }
+
+@media (max-width: 768px) {
+    #news_container {
+        block-size: auto; /* Adjust height to content */
+        padding: 1rem; /* Ensure padding */
+    }
+
+    .news_content {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 1rem; /* Reduced gap for mobile */
+    }
+
+    .news_buttons {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        gap: 0.5rem; /* Reduced gap for mobile */
+    }
+
+    .news_text {
+        margin-top: 1rem; /* Adjust margin for mobile */
+    }
+
+    button {
+        padding: 10px 20px; /* Adjust button padding for mobile */
+    }
+}
   </style>
 
 

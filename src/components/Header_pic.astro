@@ -18,6 +18,10 @@ const {img, tag, description} = Astro.props;
     display: inline-block; 
 }
 
+h2{
+    font-size: 200%;
+}
+
 .image-container img {
     display: block;
     width: 100%; 
@@ -38,6 +42,16 @@ const {img, tag, description} = Astro.props;
     place-content: center;
 
 }
-
+@media (max-width: 630px) {
+            .text_container_header {
+                top: 5%; /* Further adjustment for very small screens */
+                left: 5%;
+                max-width: 95%;
+                padding: 5%; /* Additional padding for very small screens */
+            }
+            h2{
+                font-size:large ;
+            }
+        }
 }
 </style>

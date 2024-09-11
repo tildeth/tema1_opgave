@@ -1,89 +1,170 @@
---- 
-
 ---
 
+---
 <header>
     <div class="wrapper_header">
-    <h5><a class="logo_header" href="/"> AskExperts</a></h5>
-    <nav>
+      <h5><a class="logo_header" href="/">AskExperts</a></h5>
+  
+      <!-- Navigation Menu -->
+      <nav id="nav-menu" class="menu">
         <a href="/">Home</a>
         <a href="/casestudy">Case Study</a>
         <a href="/team">Team</a>
         <a href="/about">About</a>
-    </nav>
-    <button id="header_button" class="yellow" popovertarget="popup">Login</button>
-
-    <div popover id="popup">
+      </nav>
+  
+      <!-- Burger Menu Icon -->
+      <div class="burger" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <!-- Popup for login -->
+      <button id="header_button" class="yellow" popovertarget="popup">Login</button>
+      <div popover id="popup">
         <article class="popup_content">
-        <h3>Dashboard Login</h3>
-        <div class="whitebox"> Enter Email</div>
-        <div class="whitebox"> Enter Password</div>
-        <button class="yellow">Go to dashboard</button>
+          <h3>Dashboard Login</h3>
+          <div class="whitebox">Enter Email</div>
+          <div class="whitebox">Enter Password</div>
+          <button class="yellow">Go to dashboard</button>
         </article>
+      </div>
     </div>
-    </div>  
-
-    
-
-</header>
-
-<style>
-@layer components{
-    header{
-        background-color: rgba(27, 27, 27, 0.91);
-        
-
+  </header>
+  
+  <style>
+  @layer components {
+    /* Header styles */
+    header {
+      background-color: rgba(27, 27, 27, 0.91);
+      width: 100%;
     }
-    .wrapper_header{
-        display: flex;
-        padding:38px;
-        justify-content: space-between;
-        align-items: flex-start;
-        max-width: 1200px;
-        margin: 0 auto;
+  
+    .wrapper_header {
+      display: flex;
+      padding: 38px;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
     }
-    a:visited{
-        color:var(--secondary02);
+  
+    /* Nav styles */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
     }
-    a{
-        text-decoration:none;
+  
+    nav a {
+      text-decoration: none;
+      color: var(--secondary02);
     }
+  
+    a:visited {
+      color: var(--secondary02);
+    }
+  
+    #header_button {
+      padding: 4px 16px;
+    }
+  
+    h3 {
+      color: var(--secondary02);
+      margin-bottom: 5%;
+    }
+  
+    .popup_content {
+      background-color: var(--primary03);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 45px;
+      border-radius: 23px;
+      width: 500px;
+      align-items: center;
+    }
+  
+    .whitebox {
+      align-self: stretch;
+    }
+  
+    /* Burger Menu Styles */
+    .burger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+  
+    .burger span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: var(--secondary02);
+    }
+  
 
-    nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;      
+    .menu {
+      display: flex;
+      gap: 20px;
     }
-
-    #header_button{
-        padding: 4px 16px;
+  
+    nav {
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      z-index: 500;
     }
-
-    h3{
-        color: var(--secondary02);
-        margin-bottom: 5%;
-    }
-
-    .popup_content{
+  
+    /* Styles for mobile */
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
         background-color: var(--primary03);
-        display: flex;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
         flex-direction: column;
-        gap: 15px;
-        padding: 45px;
-        border-radius: 23px;
-        width: 500px; 
         align-items: center;
-
+        transition: max-height 0.3s ease-in-out;
+      }
+  
+      nav a {
+        padding: 10px 0;
+      }
+  
+      .burger {
+        display: flex;
+      }
+  
+      .menu.nav-active {
+        max-height: 300px; 
+        margin-bottom: 300px;
+      }
     }
-
-
-   
-
-    .whitebox{
-        align-self: stretch;
-    }
-
- 
-}
-</style>
+  }
+  </style>
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const burger = document.getElementById("burger-menu");
+      const menu = document.getElementById("nav-menu");
+  
+      burger.addEventListener("click", () => {
+        menu.classList.toggle("nav-active");
+      });
+    });
+  </script>
+  
+  
+  
+  

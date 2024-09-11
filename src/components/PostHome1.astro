@@ -90,8 +90,32 @@ img{
     border-radius: 20px;
     z-index: -1;
   }
-
-  
-
+}
+  @media (max-width: 768px) {
+    .grid_hp1 {
+        margin: 1rem;
+        gap: 2%;
+        grid-template-columns: 1fr;
+        margin-top: 8%;
     }
-</style>
+
+    .text_hp1 {
+        gap: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    ul {
+        padding-left: 0.5rem;
+    }
+
+    li::before {
+        width: 1.2rem;
+    }
+}

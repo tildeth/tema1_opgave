@@ -1,0 +1,123 @@
+---
+
+---
+<section class="full-bleed-container">
+    <div class="centered-container">
+      <img class="centered-image" src="/src/assets/images/case1.png" alt="Case Image">
+    </div>
+    <div class="pop-out-container">
+      <div class="text_container_case1">
+        <div>
+          <h6>Case Name</h6>
+          <p>Taxes & Efficiency</p>
+        </div>
+        <div>
+          <h6>Category</h6>
+          <p>Business</p>
+        </div>
+        <div>
+          <h6>Date</h6>
+          <p>27th September</p>
+        </div>
+        <button class="yellow">Live Preview</button>
+      </div>
+    </div>
+  </section>
+
+<style>
+
+.full-bleed-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto; 
+  margin-top: 5%;
+  justify-content: center;
+  
+  margin-bottom: 15%;
+}
+
+.full-bleed-background {
+  grid-row: 1 / 2;
+  width: 100vw;
+  height: 400px;
+
+  margin-left: calc(-50vw + 50%); 
+}
+
+/* Centered section (holds the image) */
+.centered-container {
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+
+.centered-image {
+  width: 80%; 
+  border-radius: 20px;
+  object-fit: cover;
+  height: auto;
+}
+
+/* Pop-out section for the smaller text box */
+.pop-out-container {
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -50px; /* Pop the container out */
+}
+
+.text_container_case1 {
+  background-color: var(--primary03);
+  color: var(--secondary02);
+  padding: 40px;
+  width: 65%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+
+}
+
+.text_container_case1 h6 {
+  color: var(--secondary02);
+}
+
+button.yellow {
+ padding: 4%;
+}
+
+@media (max-width: 700px) {
+  .full-bleed-container {
+    grid-template-columns: auto; /* Full-width for mobile */
+  }
+
+  .centered-image {
+    width: 100%; /* Full width on mobile */
+  }
+
+  .text_container_case1 {
+    width: 90%; /* Maximize text container width */
+    padding: 20px; /* Smaller padding */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 5px;
+  }
+
+  .text_container_case1 h6, .text_container_case1 p {
+    text-align: center; /* Center text on mobile */
+  }
+
+  button.yellow {
+    padding: 10px 20px; /* Smaller button size */
+  }
+}
+
+</style>

@@ -1,0 +1,199 @@
+---
+
+---
+<section>
+<div class="ani_text">
+    <div class="yellow_tag">experience</div>
+    <h1>More than 25 years of experience</h1>
+    <p>3000+ our clients are insured around the World</p>
+</div>
+<div class="ani_container">
+<div>
+<div class="parent1" style="--percent: 0%">
+    <div class="child"></div>
+    <h2>85%</h2>
+  </div>
+  <h6>Consistency</h6>
+</div>
+<div>
+  <div class="parent2" style="--percent: 0%">
+    <div class="child"></div>
+    <h2>95%</h2>
+  </div>
+
+  <h6>Improvement</h6>
+</div>
+<div>
+  <div class="parent3" style="--percent: 0%">
+    <div class="child"></div>
+    <h2>90%</h2>
+  </div>
+  <h6>Branching</h6>
+</div>
+</div>
+</section>
+  
+<style>
+section{
+    display: flex;
+    background-color: var(--primary01);
+    padding: 5%;
+    place-content: center;
+}
+
+.ani_text{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    h1{
+    margin-top: -2%;
+    max-width: 20ch;
+    }
+    .yellow_tag{
+        background-color: var(--secondary02);
+    }
+}
+
+.ani_container{
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    gap: 5%;
+    h6{
+        text-align: center;
+    }
+    
+}
+h2{
+    display: flex;
+    place-content: center;
+    padding: 29%;
+}
+@property --percent {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+.parent1, .parent2, .parent3 {
+  --offset-pos: 5px;
+  border: var(--offset-pos) solid transparent;
+  background:
+    radial-gradient(circle at 50% calc(var(--offset-pos)/2), var(--secondary02) calc(var(--offset-pos)/2), transparent 0) border-box,
+    linear-gradient(var(--primary01), var(--primary01)) padding-box,
+    conic-gradient(var(--secondary02) var(--percent), #DAAE3C 0) border-box;
+  position: relative;
+  aspect-ratio: 1;
+  width: 150px;
+  border-radius: 1e5px;
+  margin-inline: auto;
+  
+  .child {
+    aspect-ratio: 1;
+    border-radius: 99px;
+    width: 20px;
+    background: var(--primary03);
+    border: 3px solid var(--secondary02);
+    position: absolute;
+    offset-path: border-box;
+    offset-distance: var(--percent);
+    offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
+  }
+} 
+
+@media (max-width: 768px) {
+  .ani_text {
+    gap: 0.5rem;
+    padding: 0 14px;
+  }
+
+  .ani_container {
+    gap: 2%;
+  }
+
+  .parent1, .parent2, .parent3 {
+    width: 100px;
+  }
+    h2{
+    padding: 25%;
+    font-size: 175%;
+  }
+}
+
+@media (max-width: 650px) {
+  .ani_text {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .ani_container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .parent1, .parent2, .parent3 {
+    width: 80px;
+  }
+
+  h2 {
+    padding: 10%;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+  h2{
+    padding: 25%;
+    font-size: 175%;
+  }
+}
+</style>  
+
+
+<script>
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+      gsap.to(".parent1", {
+    scrollTrigger: {
+      trigger: ".parent1",  // Elementet der skal trigge animationen
+      start: "top 65%",    // Hvornår animationen starter (når 75% af elementet er synligt)
+      end: "bottom 55%",   // Hvornår animationen slutter
+      scrub: true,
+      markers: true,         // Synkroniserer animationen med scroll
+    },
+    "--percent": "85%",   // Animerer variablen fra 0% til 100%
+    ease: "none",          // Ingen easing, så animationen er lineær
+    duration: 1,            // Varigheden er ikke så relevant med scrub, men skal stadig sættes
+  });
+
+  gsap.to(".parent2", {
+    scrollTrigger: {
+      trigger: ".parent2",  // Elementet der skal trigge animationen
+      start: "top 65%",    // Hvornår animationen starter (når 75% af elementet er synligt)
+      end: "bottom 55%",   // Hvornår animationen slutter
+      scrub: true,
+      markers: true,         // Synkroniserer animationen med scroll
+    },
+    "--percent": "95%",   // Animerer variablen fra 0% til 100%
+    ease: "none",          // Ingen easing, så animationen er lineær
+    duration: 1,            // Varigheden er ikke så relevant med scrub, men skal stadig sættes
+  });
+
+  gsap.to(".parent3", {
+    scrollTrigger: {
+      trigger: ".parent3",  // Elementet der skal trigge animationen
+      start: "top 65%",    // Hvornår animationen starter (når 75% af elementet er synligt)
+      end: "bottom 55%",   // Hvornår animationen slutter
+      scrub: true,
+    },
+    "--percent": "90%",   // Animerer variablen fra 0% til 100%
+    ease: "none",          // Ingen easing, så animationen er lineær
+    duration: 1,            // Varigheden er ikke så relevant med scrub, men skal stadig sættes
+  });
+
+  
+</script>

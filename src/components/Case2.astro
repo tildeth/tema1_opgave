@@ -1,0 +1,85 @@
+---
+
+---
+<section class="project-overview">
+    <div class="text-content">
+    <h2>Project Overview</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+    <ul>
+        <li>It brings the right people together with all the right information and tools to get work done</li>
+        <li>We provide operational efficiency, data security, and flexible scale</li>
+        <li>Your best work, together in one package that works seamlessly from your computer</li>
+        <li>Delivers the tools you need to save time Improve field performance always</li>
+    </ul>
+    <h4>Storyboard</h4>
+    <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service. Objectively innovate empowered manufactured products whereas parallel platforms. Holistically predominate extensible testing procedures for reliable supply chains.</p>
+    <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products completely pursue scalable customer service.</p>
+    <div class="image-content">
+        <img src="/src/assets/images/case2.png" alt="office people">
+      </div>
+      <div class="text-content project-result">
+    <h4>Project result</h4>
+    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+      </div>
+</section>
+
+<style>
+.project-overview {
+  display: grid;
+  grid-template-columns:auto 4fr auto; 
+  gap: 20px;
+  align-items: start;
+  max-width: 1200px; /* Limits the overall width */
+  margin: 0 auto; /* Centers the grid container */
+  padding: 0 40px; /* Adds space on the sides */
+  margin-top: 5%; /* Adds top margin */
+  margin-bottom: 5%;
+}
+
+.text-content {
+  grid-column: 1 / -1;
+}
+
+.image-content {
+  grid-column: 2;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 1024px) {
+  .project-overview {
+    grid-template-columns: 1fr; /* Stack text and image */
+    gap: 40px;
+  }
+  
+  .image-content {
+    grid-row: 1; /* Image on top for smaller screens */
+  }
+
+  .text-content {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-overview {
+    padding: 10px; /* Minimal padding on mobile */
+  }
+
+  .text-content {
+    font-size: 14px;
+  }
+
+  .image-content img {
+    width: 100%; /* Image takes full width on mobile */
+  }
+}
+</style>

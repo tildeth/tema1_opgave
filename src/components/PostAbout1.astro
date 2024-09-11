@@ -44,6 +44,7 @@
         gap:5%;
         margin: 5%;
         margin-bottom: 5%;
+        padding: 0 14px;
     
 }
 
@@ -72,8 +73,6 @@ img{
     border-radius: 20px;
     width: 100%;
 }
-
-  position: relative;
 
   
   &::before {
@@ -114,8 +113,7 @@ img{
     dl {
   margin: 3rem;
   text-align: center;
-  
-  
+  flex-wrap: wrap;
   display: flex;
   gap: 3rem;
 justify-content: center;
@@ -131,6 +129,105 @@ justify-content: center;
       font-weight: 500;
     }
 }
+
 }
+@media (max-width: 768px) {
+  .grid_ap1 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  dl {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+ul {
+  display: grid;
+  gap: 1rem;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #595566;
+}
+
+li:before {
+  content: '';
+  width: 1.6rem;
+  aspect-ratio: 1;
+  background: var(--checkmark-icon) 50% 50% / contain no-repeat;
+}
+
+figure img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 450px;
+  display: block;
+}
+
+figure {
+  position: relative;
+}
+
+figure::before {
+  --square-count: 10;
+  --square-size: 1.34rem;
+  
+  --_square-size: var(--square-size, 1rem);
+  --_square-half: calc(var(--square-size) / 2);
+  --_square-sum: calc(var(--square-count) * var(--square-size));
+  z-index: -1;
+  content: '';
+  position: absolute;
+  inset: -40px -40px auto auto;
+  inline-size: calc( round( var(--_square-sum), var(--_square-size) ) - var(--_square-half) );
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+  mask:
+    var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size),
+    var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+}
+
+figure::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  background: var(--primary02);
+  width: 120px;
+  height: 100px;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+dl {
+  margin: 3rem;
+  text-align: center;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+dl > div {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  font-size: 1.125rem;
+  color: #181818;
+}
+
+dl > div dd {
+  font-size: 3.125rem;
+  font-weight: 500;
+}
+
   
 </style>
