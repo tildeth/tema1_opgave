@@ -29,11 +29,11 @@ Når jeg til opgaven har benyttet Astro, så skulle jeg først installere GSAP, 
 Eksempel 2- Details og Summary
 I dette tema lærte vi også om <details> og <summary>. Dette fangede min interesse meget, da man nu kunne lave ”pop-ind” ”pop-ud”, som jeg i denne situation benyttede til en FAQ-komponent. Dette gjorde jeg helt uden JS, kunne lave en simpel opsætning med kode, og derefter style det efter designet der var givet. Dette gjorde min proces meget mere enkel, og jeg sparet en hovedpine fra at lege med JS. 
 
-/*
-<details name="a">
+
+<!-- <details name="a">
         <summary>What will happen when I’ve sent my application?</summary>
         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</div>
       </details>
       <div class="line_faq"></div>
-*/
+ -->
 Jeg stødte på flest problemer med opsætningen af grid, subgrid og flex. Ved at gennemgå gamle opgaver fandt jeg løsninger, som jeg kunne bruge i denne opgave. Jeg har lært at opsætte variabler til både styling af elementer og generelle stilarter, hvilket sparede tid og gjorde vedligeholdelsen lettere. Jeg blev også stor fan af nesting, da det gjorde min proces nemmere og gav mig en bedre forståelse af teknikken.
